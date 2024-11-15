@@ -12,14 +12,23 @@ config_version=5
 
 config/name="Understanding Pathfinding & Physics in Godot"
 config/tags=PackedStringArray("fooling_around", "tutorial")
-run/main_scene="res://level.tscn"
+run/main_scene="res://game/ecsenas/level.tscn"
 config/features=PackedStringArray("4.4", "Forward Plus")
 run/max_fps=20
-config/icon="res://Capture.PNG"
+config/icon="res://capture/Capture.PNG"
 
 [autoload]
 
-Global="*res://global_default.gd"
+Global="*res://game/script/global_default.gd"
+
+[file_customization]
+
+folder_colors={
+"res://capture/": "green",
+"res://game/": "red",
+"res://game/ecsenas/": "red",
+"res://game/script/": "orange"
+}
 
 [rendering]
 

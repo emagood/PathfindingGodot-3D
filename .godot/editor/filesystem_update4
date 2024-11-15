@@ -1,0 +1,11 @@
+res://game/level.tscn
+res://game/navigation_npc_2.gd
+res://game/prueba_ema.tscn
+res://game/navigation_npc.tscn
+res://game/level2.tscn
+res://game/navigation_npc.gd
+res://game/ecsenas/level.tscn
+res://game/ecsenas/level2.tscn
+res://game/ecsenas/prueba_ema.tscn
+res://game/ecsenas/navigation_npc.tscn
+res://game/ecsenas/level3.tscn

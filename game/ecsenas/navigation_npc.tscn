@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://qrhe7tc3vj21"]
+
+[ext_resource type="Script" path="res://game/script/navigation_npc.gd" id="1_3su6d"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mq8cf"]
+albedo_color = Color(1, 0.188235, 0.117647, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_mecox"]
+material = SubResource("StandardMaterial3D_mq8cf")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rvxtd"]
+
+[node name="NavigationNPC" type="CharacterBody3D"]
+script = ExtResource("1_3su6d")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CapsuleMesh_mecox")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+debug_enabled = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_rvxtd")
+
+[connection signal="navigation_finished" from="NavigationAgent3D" to="." method="_on_navigation_agent_3d_navigation_finished"]
+[connection signal="target_reached" from="NavigationAgent3D" to="." method="_on_navigation_agent_3d_target_reached"]
