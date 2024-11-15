@@ -42,7 +42,7 @@ This allows for dynamic and unpredictable NPC movement, enhancing the complexity
 
 1. **Clone the repository:**
     ```bash
-    git clone (https://github.com/emagood/PathfindingGodot-3D)
+    git clone [(https://github.com/emagood/PathfindingGodot-3D)](https://github.com/emagood/PathfindingGodot-3D.git)
     ```
 
 2. **Open the project in Godot:**
